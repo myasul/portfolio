@@ -1,0 +1,114 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anonymous Pro', monospace;
+    font-style: normal;
+}
+
+.banner {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: white;
+    display: inline-block;
+}
+
+.banner-font {
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    text-align: left;
+}
+
+.typewriter p {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: .10em solid grey;
+}
+
+.one {
+    width: 12em;
+    animation: type 5.5s steps(22, end),
+    blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+.two {
+    width: 13.5em;
+    opacity: 0;
+    animation: type2 6.25s steps(25, end),
+    blink-caret .75s step-end infinite;
+    animation-delay: 5.5s;
+    animation-fill-mode: forwards;
+}
+
+.three {
+    width: 19em;
+    opacity: 0;
+    animation: type3 8.75s steps(35, end),
+    blink-caret .75s step-end infinite;
+    animation-delay: 11.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .10em solid grey;
+    }
+    100% {
+        border: none;
+        display: block;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .10em solid grey;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: grey;
+    }
+}
+
+header {
+    margin: 0;
+    width: 100%;
+    max-height: 100%;
+    height: 100vh;
+    background-color: black;
+}
