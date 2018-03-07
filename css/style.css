@@ -1,3 +1,5 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico|typicons);
+
 html,
 body {
     margin: 0;
@@ -6,22 +8,55 @@ body {
     font-style: normal;
 }
 
-.banner {
+/* brandico */
+
+[class*="brandico-"]:before {
+    font-family: 'brandico', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-right: 15px;
+    text-align: right;
+}
+
+/* typicons */
+
+[class*="typicons-"]:before {
+    font-family: 'Typicons', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a[class*="brandico-"] {
+
+    text-decoration: none;
+}
+
+.logos {
+
     position: absolute;
-    top: 25%;
+    right: 0;
+    margin-top: 8px;
+
+}
+
+.banner {
+    padding: 20vh 5vh 0 5vh;
+    margin: 0 auto;
+    top: 15%;
     left: 10%;
     color: white;
-    display: inline-block;
 }
 
 .banner-font {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 4.5vw;
     color: white;
     text-align: left;
 }
 
 .typewriter p {
+    margin: 0.5em 0;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -30,7 +65,7 @@ body {
 
 .one {
     width: 12em;
-    animation: type 5.5s steps(22, end),
+    animation: type 2.75s steps(22, end),
     blink-caret .75s step-end infinite;
     animation-fill-mode: forwards;
 }
@@ -38,18 +73,18 @@ body {
 .two {
     width: 13.5em;
     opacity: 0;
-    animation: type2 6.25s steps(25, end),
+    animation: type2 3.125s steps(25, end),
     blink-caret .75s step-end infinite;
-    animation-delay: 5.5s;
+    animation-delay: 2.75s;
     animation-fill-mode: forwards;
 }
 
 .three {
     width: 19em;
     opacity: 0;
-    animation: type3 8.75s steps(35, end),
+    animation: type3 4.375s steps(35, end),
     blink-caret .75s step-end infinite;
-    animation-delay: 11.75s;
+    animation-delay: 5.875s;
     animation-fill-mode: forwards;
 }
 
@@ -108,7 +143,35 @@ body {
 header {
     margin: 0;
     width: 100%;
-    max-height: 100%;
     height: 100vh;
     background-color: black;
+}
+
+.progress {
+    width: 10.3em;
+    padding: 0 2em;
+    margin: 3em auto 0 auto;
+    color: white;
+    border: 2px solid white;
+}
+
+.progress:hover,
+.progress svg:hover {
+
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+.progress svg {
+    width: 1em;
+    fill: white;
+    padding-top: 2px;
+    transition: all 0.3s ease-out;
+}
+
+.progress:hover .arrow {
+    fill: black;
+    transform: rotate(90deg);
 }
