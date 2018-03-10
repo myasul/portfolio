@@ -13,15 +13,20 @@ body {
 
 /* HEADER */
 
-.logos {
+.logos-header {
     position: absolute;
     right: 0;
+}
+
+.logos-header,
+.logos-footer {
     margin-top: 8px;
     margin-right: 8px;
     font-size: 2em;
 }
 
-.logos a,
+.logos-header a,
+.logos-footer a,
 .progress a {
     text-decoration: none;
     color: white;
@@ -170,6 +175,19 @@ main {
     margin-top: 30px;
 }
 
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 1000px;
+    grid-template-rows: 2fr 1.5fr;
+    grid-template-areas: "about" "project";
+    justify-content: center;
+    grid-row-gap: 100px;
+}
+
+.about {
+    grid-area: "about";
+}
+
 .container {
     max-width: 978px;
     width: 100%;
@@ -179,7 +197,7 @@ main {
 
 .title {
     text-align: center;
-    line-height: 2.5em;
+    line-height: 2em;
 }
 
 h1 {
@@ -193,13 +211,7 @@ h1 {
     margin: 0 30px;
 }
 
-.aboutme {
-    text-align: center;
-    height: 400px;
-    width: 100%;
-}
-
-.grid-container {
+.grid-container-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -208,28 +220,77 @@ h1 {
 }
 
 .tech-1 {
-    grid-area: "tech1";
+    grid-area: tech1;
     align-self: center;
     justify-self: end;
 }
 
 .tech-2 {
-    grid-area: "tech2";
+    grid-area: tech2;
     align-self: center;
     justify-self: start;
 }
 
 .image-me {
-    width: 450px;
-    grid-area: "image-me";
+    width: 280px;
+    grid-area: image-me;
     align-self: center;
-    justify-self: end;
+    justify-self: center;
 }
 
 .about-me {
-    grid-area: "about me";
+    grid-area: about-me;
+    align-self: center;
     text-align: justify;
 }
+
+.project {
+    height: 40vh;
+    text-align: center;
+    grid-area: "project";
+    margin: 0 auto;
+}
+
+.project svg:nth-of-type(1) {
+    fill: white;
+    width: 210px;
+    margin: 0 30px;
+}
+
+.project svg:nth-of-type(2) {
+    fill: white;
+    width: 230px;
+    margin: 0 30px 10px;
+}
+
+/* FOOTER */
+
+footer {
+    height: 125px;
+    text-align: center;
+}
+
+.logos-footer {
+    padding-top: 20px;
+}
+
+hr {
+    width: 80vw;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header Media Query */
 
 @media screen and (max-width: 500px) {
     .tech img {
@@ -243,7 +304,7 @@ h1 {
         padding: 0 1em;
     }
 
-    .logos {
+    .logos-header {
         font-size: 1em;
     }
 }
@@ -264,7 +325,61 @@ h1 {
         width: 0%;
     }
 
-    .logos {
+    .logos-header {
         font-size: 1.5em;
+    }
+}
+
+/* Main Media Query */
+
+@media screen and (max-width: 1000px) {
+
+    .grid-container-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me {
+        padding-right: 10px;
+    }
+
+    .container,
+    .project {
+        max-width: 850px;
+    }
+
+    .tech-1 img,
+    .tech-2 img {
+        width: 160px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    main {
+        font-size: 0.9em;
+    }
+
+    .image-me {
+        width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+
+    .grid-container-2 {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25vh 25vh 1fr;
+        grid-template-areas: "tech1 tech1" "tech2 tech2" "image-me about-me";
+        grid-row-gap: 20px;
+    }
+
+    .tech-1,
+    .tech-2 {
+        justify-self: center;
     }
 }
