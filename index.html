@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -17,10 +18,10 @@
     <header>
 
         <div class="logos">
-            <a href="#" class="brandico-twitter icon"></a>
-            <a href="#" class="brandico-facebook-rect icon"></a>
-            <a href="#" class="brandico-instagram icon"></a>
-            <a href="#" class="brandico-github icon"></a>
+            <a href="#" class="fa fa-twitter-square"></a>
+            <a href="#" class="fa fa-facebook-square"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-github-square"></a>
         </div>
 
         <div class="banner banner-font typewriter">
@@ -31,28 +32,75 @@
         </div>
 
         <div class="progress">
-            <p>View My Progress
-                <svg class="arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+            <a href="#skills">
+                <p>View My Progress
+                    <svg class="arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
                 <path d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
                             c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
                             v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
                             c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
                             l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z"/>
-            </svg>
-            </p>
+                    </svg>
+                </p>
+            </a>
         </div>
 
     </header>
 
     <main>
 
-        <!-- TODO -->
-        More content here
+        <section class="about">
+
+            <div class="container">
+
+                <div class="title">
+                    <h1>Skill Set</h1>
+                    <small>Here are the following technologies that I've learned throughout my Full Stack Web Developer Nanodegree Program</small>
+                </div>
+
+                <div class="grid-container">
+
+                    <div class="tech-1">
+                        <img src="images/html.svg">
+                        <img src="images/css.svg">
+                    </div>
+                    <div class="tech-2">
+                        <img src="images/python.svg">
+                        <img src="images/js.svg">
+                    </div>
+
+
+
+                    <img class="image-me" src="images/me.png">
+
+                    <div class="about-me">
+                        <h1>About Me</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor a nulla ut rhoncus. Donec suscipit luctus ante, eget suscipit odio accumsan vel. Fusce aliquet molestie euismod. Proin luctus vestibulum metus ac congue. Aliquam iaculis finibus sollicitudin. Phasellus imperdiet ut ipsum et ultrices. Proin porttitor turpis justo, non viverra lectus placerat vel. Curabitur congue mauris quam, vitae consectetur urna lobortis ut. Vestibulum auctor egestas scelerisque. In lacinia in ipsum ut ullamcorper. .</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="project">
+
+        </section>
 
     </main>
 
     <!-- JQuery -->
     <script src="js/jquery.min.js"></script>
+    <script>
+        $(".progress").click(function() {
+            $("html, body").animate({
+                scrollTop: $(".about").offset().top
+            }, 800)
+        });
+
+    </script>
 
 </body>
 
