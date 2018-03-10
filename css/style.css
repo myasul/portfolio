@@ -196,8 +196,9 @@ main {
 }
 
 .title {
+    margin-top: 10px;
     text-align: center;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 h1 {
@@ -213,10 +214,9 @@ h1 {
 
 .grid-container-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.fr 1fr;
+    grid-template-rows: 1.75fr 2fr;
     grid-template-areas: "tech1 tech2" "image-me about-me";
-    grid-row-gap: 10px;
 }
 
 .tech-1 {
@@ -234,7 +234,7 @@ h1 {
 .image-me {
     width: 280px;
     grid-area: image-me;
-    align-self: center;
+    align-self: start;
     justify-self: center;
 }
 
@@ -242,6 +242,18 @@ h1 {
     grid-area: about-me;
     align-self: center;
     text-align: justify;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project {
@@ -278,17 +290,7 @@ hr {
     width: 80vw;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 /* Header Media Query */
 
@@ -370,16 +372,83 @@ hr {
 @media screen and (max-width: 840px) {
 
     .grid-container-2 {
-        display: grid;
-        grid-auto-flow: row;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 25vh 25vh 1fr;
         grid-template-areas: "tech1 tech1" "tech2 tech2" "image-me about-me";
         grid-row-gap: 20px;
+        justify-content: center;
     }
 
     .tech-1,
     .tech-2 {
         justify-self: center;
     }
+}
+
+@media screen and (max-width: 720px) {
+
+    .grid-container-1 {
+        grid-template-rows: 1000px 2fr 1fr;
+        grid-template-areas: "about" "project" "footer";
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .grid-container-2 {
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 25vh 25vh 1fr 1fr;
+        grid-template-areas: "tech1 tech1" "tech2 tech2" "about-me about-me" "image-me image-me";
+        grid-row-gap: 0px;
+    }
+
+    .tech-1,
+    .tech-2 {
+        justify-self: center;
+    }
+
+    .container,
+    .project {
+        max-width: 500px;
+    }
+
+    .project svg:nth-of-type(1) {
+        fill: white;
+        width: 200px;
+        margin: 0;
+    }
+
+    .project svg:nth-of-type(2) {
+        fill: white;
+        width: 220px;
+        margin: 0 0 10px 0;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .tech-1 img,
+    .tech-2 img {
+        width: 130px;
+        margin: 10px;
+    }
+
+    .project svg:nth-of-type(1) {
+        fill: white;
+        width: 180px;
+        margin: 0;
+    }
+
+    .project svg:nth-of-type(2) {
+        fill: white;
+        width: 200px;
+        margin: 0 0 10px 0;
+    }
+
 }
