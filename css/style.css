@@ -18,9 +18,16 @@ body {
     right: 0;
 }
 
+header img {
+    width: 60px;
+    position: absolute;
+    top: 10px;
+    left: 45vw;
+}
+
 .logos-header,
 .logos-footer {
-    margin-top: 8px;
+    margin-top: 15px;
     margin-right: 8px;
     font-size: 2em;
 }
@@ -246,14 +253,19 @@ h1 {
 
 .flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+figcaption {
+    text-align: center;
 }
 
 .project {
@@ -295,10 +307,6 @@ hr {
 /* Header Media Query */
 
 @media screen and (max-width: 500px) {
-    .tech img {
-        width: 180px;
-        margin: 0;
-    }
 
     .progress {
         width: 10.4em;
@@ -307,15 +315,15 @@ hr {
     }
 
     .logos-header {
-        font-size: 1em;
+        font-size: 1.4em;
+    }
+
+    header img {
+        width: 40px;
     }
 }
 
 @media screen and (max-width: 960px) and (min-width: 501px) {
-    .tech img {
-        width: 180px;
-        margin: 0 50px;
-    }
 
     .progress {
         width: 10.4em;
@@ -328,7 +336,11 @@ hr {
     }
 
     .logos-header {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    header img {
+        width: 50px;
     }
 }
 
@@ -383,6 +395,11 @@ hr {
     .tech-2 {
         justify-self: center;
     }
+
+    .tech-1 img,
+    .tech-2 img {
+        width: 180px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -408,6 +425,11 @@ hr {
         justify-self: center;
     }
 
+    .tech-1 img,
+    .tech-2 img {
+        width: 160px;
+    }
+
     .container,
     .project {
         max-width: 500px;
@@ -429,13 +451,22 @@ hr {
         margin: 0;
     }
 
+    figcaption {
+        width: 200px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
 
+    .grid-container-1 {
+        grid-template-rows: 900px 390px 1fr;
+        grid-template-areas: "about" "project" "footer";
+    }
+
     .tech-1 img,
     .tech-2 img {
-        width: 130px;
+        width: 120px;
         margin: 10px;
     }
 
@@ -449,6 +480,27 @@ hr {
         fill: white;
         width: 200px;
         margin: 0 0 10px 0;
+    }
+
+    figcaption {
+        font-size: 0.9em;
+        line-height: 1.3em;
+        width: 180px;
+    }
+
+    footer {
+        height: 85px;
+    }
+
+    .logos-footer {
+        font-size: 1.4em;
+        padding-top: 10px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+        line-height: 2em;
+        margin: 0;
     }
 
 }

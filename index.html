@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="icon" href="images/MY.png">
 </head>
 
 <body>
@@ -23,6 +23,8 @@
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-github-square"></a>
         </div>
+
+        <img class="logo" src="images/MY.png">
 
         <div class="banner banner-font typewriter">
             <p class="one">Hello World! I'm Matt!</p><br>
@@ -72,7 +74,10 @@
                             <img src="images/js.svg">
                         </div>
 
-                        <img class="image-me" src="images/me.png">
+                        <picture class="image-me">
+                            <source media="(max-width: 720px)" srcset="images/me_optimized_350.png">
+                            <img class="image-me" src="images/me_optimized_450.png">
+                        </picture>
 
                         <div class="about-me">
                             <h1>About Me</h1>
@@ -127,7 +132,9 @@
 	</g>
 </g>
 </svg>
-                        <figcaption>Portfolio Project</figcaption>
+                        <figcaption>Portfolio Project
+                            <p>Technical portfolio that shows my skills and all things that I've learned from this course. It also highlights a few things about me!</p>
+                        </figcaption>
                     </figure>
 
                     <figure class="flex-column">
@@ -180,7 +187,9 @@
 </g>
 </svg>
 
-                        <figcaption>Restaurant Project</figcaption>
+                        <figcaption>Restaurant Project
+                            <p>A website that lets you create and maintain a list of restaurants and menus within the restaurants that you've created! </p>
+                        </figcaption>
 
                     </figure>
 
@@ -206,14 +215,7 @@
 
     <!-- JQuery -->
     <script src="js/jquery.min.js"></script>
-    <script>
-        $(".progress").click(function() {
-            $("html, body").animate({
-                scrollTop: $(".about").offset().top
-            }, 800)
-        });
-
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 
