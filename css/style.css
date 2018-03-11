@@ -188,7 +188,7 @@ main {
 }
 
 .about {
-    grid-area: "about";
+    grid-area: about;
 }
 
 .container {
@@ -267,7 +267,7 @@ figcaption {
 .project {
     height: 40vh;
     text-align: center;
-    grid-area: "project";
+    grid-area: project;
     margin: 0 auto;
 }
 
@@ -280,7 +280,7 @@ figcaption {
 .project svg:nth-of-type(2) {
     fill: #fff;
     width: 230px;
-    margin: 0 30px 10px;
+    margin: 0 30px 0 10px;
 }
 
 /* FOOTER */
@@ -452,9 +452,16 @@ hr {
 @media screen and (max-width: 500px) {
 
     .grid-container-1 {
+        grid-template-columns: 1fr;
         grid-template-rows: 900px 390px 1fr;
         grid-template-areas: "about" "project" "footer";
     }
+
+    .container,
+    .project {
+        max-width: 400px;
+    }
+
 
     .tech-1 img,
     .tech-2 img {
@@ -464,16 +471,20 @@ hr {
 
     .project svg:nth-of-type(1) {
         width: 180px;
+        margin: 0;
     }
 
     .project svg:nth-of-type(2) {
         width: 200px;
+        margin: 0;
     }
 
     figcaption {
         font-size: 0.9em;
         line-height: 1.3em;
         width: 180px;
+        margin: 0;
+
     }
 
     footer {
