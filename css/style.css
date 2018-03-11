@@ -1,5 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=brandico|typicons);
-
 html,
 body {
     margin: 0;
@@ -7,8 +5,8 @@ body {
     font-family: 'Anonymous Pro', monospace;
     font-style: normal;
     font-size: 16px;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
 }
 
 /* HEADER */
@@ -32,11 +30,9 @@ header img {
     font-size: 2em;
 }
 
-.logos-header a,
-.logos-footer a,
-.progress a {
+a {
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .banner {
@@ -44,13 +40,13 @@ header img {
     margin: 0 auto;
     top: 15%;
     left: 10%;
-    color: white;
+    color: #fff;
 }
 
 .banner-font {
     font-weight: 300;
     font-size: 4.5vw;
-    color: white;
+    color: #fff;
     text-align: left;
 }
 
@@ -59,7 +55,7 @@ header img {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
-    border-right: .10em solid grey;
+    border-right: .10em solid #7F7F7F;
 }
 
 .one {
@@ -132,7 +128,7 @@ header img {
 @keyframes blink-caret {
     from,
     to {
-        border-color: transparent
+        border-color: transparent;
     }
     50% {
         border-color: grey;
@@ -150,29 +146,29 @@ header {
     width: 10.3em;
     padding: 0 2em;
     margin: 3em auto 0 auto;
-    color: white;
-    border: 2px solid white;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .progress:hover a,
 .progress:hover,
 .progress a:hover {
 
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
 
 .progress svg {
     width: 1em;
-    fill: white;
+    fill: #fff;
     padding-top: 2px;
     transition: all 0.3s ease-out;
 }
 
 .progress:hover .arrow {
-    fill: black;
+    fill: #000;
     transform: rotate(90deg);
 }
 
@@ -276,13 +272,13 @@ figcaption {
 }
 
 .project svg:nth-of-type(1) {
-    fill: white;
+    fill: #fff;
     width: 210px;
     margin: 0 30px;
 }
 
 .project svg:nth-of-type(2) {
-    fill: white;
+    fill: #fff;
     width: 230px;
     margin: 0 30px 10px;
 }
@@ -436,15 +432,11 @@ hr {
     }
 
     .project svg:nth-of-type(1) {
-        fill: white;
         width: 200px;
-        margin: 0;
     }
 
     .project svg:nth-of-type(2) {
-        fill: white;
         width: 220px;
-        margin: 0 0 10px 0;
     }
 
     figure {
@@ -471,15 +463,11 @@ hr {
     }
 
     .project svg:nth-of-type(1) {
-        fill: white;
         width: 180px;
-        margin: 0;
     }
 
     .project svg:nth-of-type(2) {
-        fill: white;
         width: 200px;
-        margin: 0 0 10px 0;
     }
 
     figcaption {
