@@ -122,7 +122,6 @@ a {
     100% {
         opacity: 1;
     }
-
 }
 
 @keyframes blink-caret {
@@ -153,12 +152,10 @@ header {
 .progress:hover a,
 .progress:hover,
 .progress a:hover {
-
     background-color: #fff;
     color: #000;
     cursor: pointer;
 }
-
 
 .progress svg {
     width: 1em;
@@ -302,43 +299,34 @@ hr {
     width: 80vw;
 }
 
-
-
 /* Header Media Query */
 
 @media screen and (max-width: 500px) {
-
     .progress {
         width: 10.4em;
         font-size: 0.7em;
         padding: 0 1em;
     }
-
     .logos-header {
         font-size: 1.4em;
     }
-
     header img {
         width: 40px;
     }
 }
 
 @media screen and (max-width: 960px) and (min-width: 501px) {
-
     .progress {
         width: 10.4em;
         font-size: 0.9em;
         padding: 0 1em;
     }
-
     .arrow {
         width: 0%;
     }
-
     .logos-header {
         font-size: 2em;
     }
-
     header img {
         width: 50px;
     }
@@ -347,42 +335,33 @@ hr {
 /* Main Media Query */
 
 @media screen and (max-width: 1000px) {
-
     .grid-container-1 {
         grid-template-columns: 1fr;
     }
-
     .about-me {
         padding-right: 10px;
     }
-
     .container,
     .project {
         max-width: 850px;
     }
-
     .tech-1 img,
     .tech-2 img {
         width: 160px;
         margin: 10px;
     }
-
     h1 {
         font-size: 2em;
     }
-
     main {
         font-size: 0.9em;
     }
-
     .image-me {
         width: 250px;
     }
-
 }
 
 @media screen and (max-width: 840px) {
-
     .grid-container-2 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 25vh 25vh 1fr;
@@ -390,7 +369,6 @@ hr {
         grid-row-gap: 20px;
         justify-content: center;
     }
-
     .tech-1 img,
     .tech-2 img {
         width: 180px;
@@ -398,16 +376,13 @@ hr {
 }
 
 @media screen and (max-width: 720px) {
-
     .grid-container-1 {
         grid-template-rows: 1000px 2fr 1fr;
         grid-template-areas: "about" "project" "footer";
     }
-
     footer {
         grid-area: footer;
     }
-
     .grid-container-2 {
         grid-template-columns: 40vw 40vw;
         grid-template-rows: 25vh 25vh 1fr 1fr;
@@ -416,103 +391,80 @@ hr {
         justify-content: center;
         align-content: center;
     }
-
     .tech-1,
     .tech-2 {
         align-self: center;
     }
-
     .tech-1 img,
     .tech-2 img {
         width: 160px;
     }
-
     .about-me h1 {
         text-align: center;
     }
-
     .container,
     .project {
         max-width: 500px;
     }
-
     .project svg:nth-of-type(1) {
         width: 200px;
     }
-
     .project svg:nth-of-type(2) {
         width: 220px;
     }
-
     figure {
         margin: 0;
     }
-
     figcaption {
         width: 200px;
     }
-
 }
 
 @media screen and (max-width: 500px) {
-
     .grid-container-1 {
         grid-template-columns: 1fr;
         grid-template-rows: 900px 390px 1fr;
         grid-template-areas: "about" "project" "footer";
     }
-
     .container,
     .project {
         max-width: 400px;
     }
-
-
     .tech-1 img,
     .tech-2 img {
         width: 120px;
         margin: 10px;
     }
-
     .project svg:nth-of-type(1) {
         width: 180px;
         margin: 0;
     }
-
     .project svg:nth-of-type(2) {
         width: 200px;
         margin: 0;
     }
-
     figcaption {
         font-size: 0.9em;
         line-height: 1.3em;
         width: 155px;
         margin: 0;
-
     }
-
     .container .title {
         width: 350px;
     }
-
     .project .title {
         width: 350px;
     }
-
     footer {
         height: 85px;
     }
-
     .logos-footer {
         font-size: 1.4em;
         padding-top: 10px;
     }
-
     footer p {
         font-size: 0.9em;
         line-height: 2em;
         margin: 0;
     }
-
 }
